@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+
+
+body {
+    background: url('./asset/backgroundphoto.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.animate-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color:#ffcc00
+}
+
+.calculator {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    animation: slideUp 1.5s ease;
+}
+
+.calculator label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.calculator input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #ffcc00;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #ffdd33;
+    transform: scale(1.05);
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    animation: fadeInResult 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+    0%, 100% { color: #ffcc00; }
+    50% { color: #fff; }
+}
+
+@keyframes fadeInResult {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 480px) {
+    .animate-title {
+        font-size: 2rem;
+    }
+
+    .calculator {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}
